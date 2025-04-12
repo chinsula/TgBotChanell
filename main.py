@@ -33,8 +33,10 @@ def send_advice():
 
 while True:
     current_time = time.localtime()
-    send_advice()
-    time.sleep(7200)
-    if current_time.tm_hour >= 18 and current_time.tm_min == 0:
-        break
-
+    if current_time.tm_hour == 1 and current_time.tm_min == 30:
+        while True:
+            send_advice()
+            time.sleep(7200)
+            if current_time.tm_hour >= 11:
+                break
+    time.sleep(30)  # Проверяем время каждые 30 секунд
