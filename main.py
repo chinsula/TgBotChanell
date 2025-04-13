@@ -1,11 +1,12 @@
 import requests
 import time
 import search
+import os
 
 # Ваш токен и ID канала
 TOKEN = "7418415442:AAETsDSMOtR4_l8NfJr6igu8fWDec4kebng"
 CHANNEL_ID = "-1002622142869"  # Например, -1001234567890 для приватного канала
-
+port = int(os.environ.get("PORT", 5000))  # 5000 - это запасной порт
 
 def send_advice():
     # Выбор случайного совета
